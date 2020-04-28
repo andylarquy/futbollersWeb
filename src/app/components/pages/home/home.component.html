@@ -1,0 +1,19 @@
+<div class= "container">
+    <mat-card class="cancha-card" *ngFor="let cancha of canchas">
+        <mat-card-header>
+            <mat-card-title>
+                <a [routerLink]= "['/canchas', canchas.id]" >
+                   {{cancha.nombre}}     
+                </a>                
+            </mat-card-title>
+           </mat-card-header>
+        <img matCardImage [src]="cancha.imagen">
+        <mat-card-content>
+            <p>
+                {{ cancha.cesped }}
+            </p>
+        </mat-card-content>
+        
+    </mat-card>
+
+</div>
